@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { AppWrapper } from "../../Wrapper";
 import "./Header.scss";
 
 const Header = () => {
@@ -68,4 +69,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrapper(Header, "home");

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
+import { AppWrapper, MotionWrapper } from "../../Wrapper";
 import "./About.scss";
 
 const About = () => {
@@ -41,4 +42,8 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrapper(
+  MotionWrapper(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
