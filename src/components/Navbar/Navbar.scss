@@ -85,10 +85,12 @@
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-color);
+  
   svg {
     width: 70%;
     height: 70%;
     color: var(--white-color);
+    cursor: pointer;
   }
 
   div {
