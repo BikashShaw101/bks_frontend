@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrapper } from "../../Wrapper";
 import "./Header.scss";
+import { client, urlFor } from "../../client";
 
 const Header = () => {
+  const [image, setImage] = useState([]);
+  const [subjectBrand, setSubjectBrand] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "subject"]';
+    const subjectbrand = '*[_type == "subjectbrand"]';
+
+    client.fetch(query).then((data) => {
+      setImage(data);
+    });
+    client.fetch(subjectbrand).then((data) => {
+      setSubjectBrand(data);
+    });
+  }, []);
+
   const scaleVariants = {
     whileInView: {
       scale: [0, 1],
@@ -33,7 +49,7 @@ const Header = () => {
           </div>
           <div className="tag-cmp app__flex">
             <p className="p-text">Web developer</p>
-            <p className="p-text">Freelancer</p>
+            <p className="p-text">Backend developer</p>
             <p className="p-text">UI/UX</p>
           </div>
         </div>
@@ -44,7 +60,9 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.bikash} alt="profile_img" />
+        {image.map((img, index) => (
+          <img src={urlFor(img.imgUrl)} alt="profile_img" key={index} />
+        ))}
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -59,9 +77,9 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {subjectBrand.map((image, index) => (
           <div className="circle_cmp app__flex " key={index}>
-            <img src={circle} alt="" />
+            <img src={urlFor(image.imgUrl)} alt={image.name} />
           </div>
         ))}
       </motion.div>

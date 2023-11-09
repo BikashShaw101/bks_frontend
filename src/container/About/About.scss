@@ -36,3 +36,29 @@
     }
   }
 }
+
+.pchoice{
+  text-align: center;
+  margin-top: 2rem;
+  p{
+    text-align: center;
+  }
+}
+
+.cv{
+  margin-top: 2rem;
+  padding: 0.45rem 1rem;
+  background: var(--secondary-color);
+  outline: none;
+  border-radius: 3px;
+  border: 1.5px solid var(--secondary-color);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    color: var(--secondary-color);
+    background: var(--white-color);
+  }
+}

@@ -16,8 +16,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text app_flex">
-        I Know That<span> Good Development </span> means{" "}
-        <span>Good Business</span>
+        <span> Keep Growing</span> Keep Learning
+        <span> Keep Smiling </span>
       </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -38,6 +38,18 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+      <a
+        href="https://www.mediafire.com/file/xy8irjgwoicu18p/ResumeBikash.pdf/file"
+        download={"ResumeBikash.pdf"}
+      >
+        <button className="cv">Download CV</button>
+      </a>
+      <div className="pchoice">
+        <p className="p-text">Personal Choice</p>
+        <h6 className="p-text">
+          <span> Mission Vedanta and </span> Nature
+        </h6>
+      </div>
     </>
   );
 };
@@ -45,5 +57,6 @@ const About = () => {
 export default AppWrapper(
   MotionWrapper(About, "app__about"),
   "about",
-  "app__whitebg"
+  "app__whitebg",
+  "hidden"
 );

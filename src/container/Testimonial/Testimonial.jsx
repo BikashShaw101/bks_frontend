@@ -92,5 +92,6 @@ const Testimonial = () => {
 export default AppWrapper(
   MotionWrapper(Testimonial, "app__testimonial"),
   "testimonial",
-  "app__primarybg"
+  "app__primarybg",
+  "hidden"
 );

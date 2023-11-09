@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <span>BKS</span>
+        <a href="/">BKS</a>
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "testimonial", "contact"].map(

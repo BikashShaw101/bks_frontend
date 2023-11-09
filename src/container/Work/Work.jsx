@@ -120,5 +120,6 @@ const Work = () => {
 export default AppWrapper(
   MotionWrapper(Work, "app__works"),
   "work",
-  "app_primarybg"
+  "app_primarybg",
+  "hidden"
 );

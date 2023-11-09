@@ -91,5 +91,6 @@ const Skills = () => {
 export default AppWrapper(
   MotionWrapper(Skills, "app__skills"),
   "skills",
-  "app__whitebg"
+  "app__whitebg",
+  "hidden"
 );

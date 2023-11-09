@@ -39,7 +39,9 @@
 .copyright {
   width: 100%;
   padding: 2rem 0 0;
-
+  &.hidden {
+    display: none;
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

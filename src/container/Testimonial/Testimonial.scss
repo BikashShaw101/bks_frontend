@@ -57,7 +57,7 @@
   flex: 1;
   height: 100%;
 
-  padding: 0 2rem;
+  padding: 0 1rem;
   text-align: left;
 
   display: flex;
@@ -66,8 +66,10 @@
   justify-content: space-around;
 
   p {
+    margin-top: 1rem;
     font-size: 1.25rem;
-    line-height: 2rem;
+    font-weight: 500;
+    line-height: 1.40rem;
     color: var(--black-color);
     font-family: var(--font-base);
   }
@@ -92,7 +94,7 @@
     height: 50px;
     border-radius: 50%;
     background-color: var(--white-color);
-
+    cursor: pointer;
     margin: 1rem;
     transition: all 0.3s ease-in-out;
 
@@ -113,7 +115,7 @@
 }
 
 .app__testimonial-brands {
-  width: 80%;
+  width: 90%;
   flex-wrap: wrap;
   margin-top: 2rem;
 
@@ -122,7 +124,7 @@
     margin: 1.5rem;
 
     img {
-      width: 100%;
+      width: 80%;
       height: auto;
       object-fit: cover;
       filter: grayscale(1);
