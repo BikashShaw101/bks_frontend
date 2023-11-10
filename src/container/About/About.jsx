@@ -38,10 +38,7 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-      <a
-        href="https://www.mediafire.com/file/xy8irjgwoicu18p/ResumeBikash.pdf/file"
-        download={"ResumeBikash.pdf"}
-      >
+      <a href="/ResumeBikash.pdf" download={"ResumeBikash.pdf"}>
         <button className="cv">Download CV</button>
       </a>
       <div className="pchoice">
