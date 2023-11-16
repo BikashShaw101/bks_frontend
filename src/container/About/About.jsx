@@ -39,13 +39,14 @@ const About = () => {
         ))}
       </div>
       <a href="/ResumeBikash.pdf" download={"ResumeBikash.pdf"}>
-        <button className="cv">Download CV</button>
+        <button className="">Download CV</button>
       </a>
       <div className="pchoice">
         <p className="p-text">Personal Choice</p>
         <h6 className="p-text">
-          <span> Mission Vedanta and </span> Nature
+          <span> *Mission Vedanta* </span>
         </h6>
+        <p className="p-text">@EnbikCognition</p>
       </div>
     </>
   );

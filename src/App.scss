@@ -152,6 +152,29 @@
   }
 }
 
+// ------------------ button ----------------------
+button {
+  padding: 0.9rem 1.9rem;
+  border-radius: 10px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+
+  font-weight: 500;
+  color: var(--white-color);
+  outline: none;
+  margin: 2rem 0 0 0;
+  font-family: var(--font-base);
+
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+  }
+}
+
 .app__navigation {
   display: flex;
   justify-content: center;

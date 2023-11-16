@@ -24,8 +24,8 @@ const Navbar = () => {
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
+            whileInView={{ opacity: [0, 1], x: [500, 0] }}
+            transition={{ duration: 0.55 }}
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
